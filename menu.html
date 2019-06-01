@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS3和JS响应式垂直手风琴特效</title>
+
+	<script src="js/modernizr.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css1/modernforms.css">
+	<link rel="stylesheet" href="css1/font-awesome.min.css">
+	<link rel="stylesheet" href="css1/themes/theme-green.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="accordion">
+			<dl>
+				<dt>
+					<a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="accordion-title accordionTitle js-accordionTrigger">关键指标录入区</a>
+				</dt>
+				<dd class="accordion-content accordionItem is-collapsed" id="accordion1" aria-hidden="true">
+					<div class="modern-forms">
+						<div class="modern-container">
+							<form>
+								<fieldset>
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="配种入群的母猪，不包括后备母猪">
+												<label class="mdn-label">基础母猪存栏 头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="email" class="mdn-input" placeholder="1wk 3wk 5wk">
+												<label class="mdn-label">生产批次</label>
+												<span class="mdn-icon"><i class="fa fa-envelope"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+
+									</div><!-- end form-row -->
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="分娩母猪数/初配种总数×100%">
+												<label class="mdn-label">分娩率 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">标准85%以上</span>
+											</div>
+										</div><!-- end col-6 -->
+									</div><!-- end form-row -->
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="search" class="mdn-input" placeholder="包括健仔、弱仔、死胎、木乃伊、畸形">
+												<label class="mdn-label">窝均产仔总数 头/窝</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="tel" class="mdn-input" placeholder="健仔数/窝均产仔总数×100%">
+												<label class="mdn-label">健仔率 %</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+									</div><!-- end form-row -->
+
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="url" class="mdn-input" placeholder="窝均断奶头数/窝均健仔数×100%">
+												<label class="mdn-label">哺乳期成活率 %</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+									</div><!-- end form-row -->
+
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="number" class="mdn-input" placeholder="断奶后7天内发情母猪数/该批断奶母猪数×100%">
+												<label class="mdn-label">断奶发情率 %</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+									</div><!-- end form-row -->
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="断奶-配种间隔天数">
+												<label class="mdn-label">断配间隔 天</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-msg right">标准5.5天</span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="">
+												<label class="mdn-label">保育舍饲养周期 天</label>
+												<span class="mdn-msg right msg-hidden">保育-出栏</span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+									</div><!-- end form-row -->
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="保育舍猪只全部转出至下一批断奶仔猪转入的阶段">
+												<label class="mdn-label">保育舍空舍天数 天</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="保育舍每栏饲养头数">
+												<label class="mdn-label">保育猪数 头/栏</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="每个栋舍或单元的栏位数量">
+												<label class="mdn-label">保育栏数 栏/栋</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="期末转出头数/期初转入头数×100%">
+												<label class="mdn-label">保育成活率 %</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="">
+												<label class="mdn-label">育肥舍饲养周期 天</label>
+												<span class="mdn-msg right msg-hidden">育肥-出栏</span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+
+
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="育肥舍猪只全部转出至下一批猪只转入的阶段">
+												<label class="mdn-label">育肥舍空栏天数 天</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="育肥舍每个栏位的存栏量">
+												<label class="mdn-label">育肥猪数 头/栏</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="每栋育肥舍的栏位数量">
+												<label class="mdn-label">育肥栏数 栏/栋</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group prepend-icon">
+												<input type="text" class="mdn-input" placeholder="期末转出头数/期初转入头数×100%">
+												<label class="mdn-label">育肥猪成活率 %</label>
+												<span class="mdn-icon"><i class="fa fa-globe"></i></span>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+									</div><!-- end form-row -->
+								</fieldset>
+
+							</form>
+						</div><!-- modern-container -->
+					</div><!-- modern-forms -->
+
+				</dd>
+				<dt>
+					<a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="accordion-title accordionTitle js-accordionTrigger">
+						默认指标调节区</a>
+				</dt>
+				<dd class="accordion-content accordionItem is-collapsed" id="accordion2" aria-hidden="true">
+					<div class="modern-forms">
+						<div class="modern-container">
+							<form>
+								<fieldset>
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="7">
+												<label class="mdn-label">妊娠母猪提前上产床天数</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">通常配种后107天</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="21">
+												<label class="mdn-label">哺乳期 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">分娩-断奶</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="7">
+												<label class="mdn-label">产床洗消天数 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">栋舍全部清空-再次进猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="114">
+												<label class="mdn-label">妊娠期 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-分娩</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">产床增比 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">在产床标准设计需求量的基础上增加的比例</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="60">
+												<label class="mdn-label">主动淘汰 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">评估母猪性能并于断奶时主动采取淘汰</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="40">
+												<label class="mdn-label">被动淘汰 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">在繁殖阶段由于不可控因素而导致的淘汰</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="50">
+												<label class="mdn-label">规则返情 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">规则返情/妊娠失败母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="20">
+												<label class="mdn-label">不规则返情 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">不规则返情/妊娠失败母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">PCN %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">PCN/妊娠失败母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="5">
+												<label class="mdn-label">NIP %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">NIP/妊娠失败母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="5">
+												<label class="mdn-label">流产 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">流产/妊娠失败母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="5">
+												<label class="mdn-label">死亡 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">死亡/妊娠失败母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="5">
+												<label class="mdn-label">淘汰 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">淘汰/妊娠失败母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="21">
+												<label class="mdn-label">规则返情平均阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-规则返情天数</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="30">
+												<label class="mdn-label">不规则返情平均阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-不规则返情天数</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="50">
+												<label class="mdn-label">PCN平均阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-B超孕检阴性天数</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="90">
+												<label class="mdn-label">NIP平均阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-视觉妊娠检查阴性天数</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="65">
+												<label class="mdn-label">流产平均阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-流产天数</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="50">
+												<label class="mdn-label">死亡平均阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-死亡天数</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="35">
+												<label class="mdn-label">淘汰平均阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">配种-淘汰天数</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="50">
+												<label class="mdn-label">死胎 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">死胎/无效仔猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="30">
+												<label class="mdn-label">弱仔 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">弱仔/无效仔猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">木乃伊 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">木乃伊/无效仔猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">畸形 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">畸形/无效仔猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="100">
+												<label class="mdn-label">母猪/公猪</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">母猪为基础母猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="40">
+												<label class="mdn-label">更新率 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">后备母猪入群/基础母猪×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="60">
+												<label class="mdn-label">仔猪压死 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">仔猪压死/总损失×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">仔猪饿死 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">仔猪饿死/总损失×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">腹泻死亡 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">仔猪腹泻死亡/总损失×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="5">
+												<label class="mdn-label">仔猪已知疾病死亡 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">仔猪已知疾病死亡/总损失×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="5">
+												<label class="mdn-label">仔猪未知疾病死亡 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">仔猪未知疾病死亡/总损失×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">仔猪淘汰 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">仔猪淘汰/总损失×100%</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="15">
+												<label class="mdn-label">保育猪平均死亡阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">指保育阶段的平均损失天数，而非仔猪日龄</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="50">
+												<label class="mdn-label">育肥猪平均死亡阶段 天</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">指育肥阶段的平均损失天数，而非猪只日龄</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="10">
+												<label class="mdn-label">定位栏增比 %</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">在定位栏标准设计需求量的基础上增加的比例</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input" placeholder="4">
+												<label class="mdn-label">引种次数</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">每年引种后备母猪的次数</span>
+											</div>
+										</div><!-- end col-6 -->
+									</div><!-- end form-row -->
+
+
+								</fieldset>
+
+							</form>
+						</div><!-- modern-container -->
+					</div><!-- modern-forms -->
+				</dd>
+				<dt>
+					<a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+						生产指标输出区
+					</a>
+				</dt>
+				<dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+					<div class="modern-forms">
+						<div class="modern-container">
+							<form>
+								<fieldset>								
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">规则返情产生的非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">不规则返情产生的非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">PCN产生的非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">NIP产生的非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">流产产生的非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">死亡产生的非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">淘汰产生的非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">非生产天数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">LSY</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">窝均健仔数 头/窝</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">窝均断奶头数 头/窝</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">PSY</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">年淘汰母猪头数 头/年</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次淘汰母猪头数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次淘汰母猪头数/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">主动淘汰数量 头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">被动淘汰数量 头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次配种头数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次分娩头数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次分娩头数/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次配种后备母猪头数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次配种后备母猪头数/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次配种后备母猪头数/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">配种7d内断奶发情母猪头数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">配种7d内断奶发情母猪/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">配种7d内断奶发情母猪/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">配种问题母猪头数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">配种问题母猪头数/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">配种问题母猪头数/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">产仔总数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次产仔总数/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">产健仔总数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次产健仔总数/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">断奶总数 头/批</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">批次断奶仔猪总数/基础母猪×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">MSY</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">规则返情母猪/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">不规则返情母猪/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">PCN/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">NIP/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">流产/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">死亡/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">淘汰/批次配种总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">死胎/窝均产仔总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">弱仔/窝均产仔总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">木乃伊/窝均产仔总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">畸形/窝均产仔总数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">仔猪压死/窝均健仔猪数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">仔猪饿死/窝均健仔猪数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">仔猪腹泻死亡/窝均健仔猪数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">仔猪已知疾病死亡/窝均健仔猪数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">仔猪未知疾病死亡/窝均健仔猪数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">仔猪淘汰/窝均健仔猪数×100%</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+
+									</div><!-- end form-row -->
+								</fieldset>
+
+							</form>
+						</div><!-- modern-container -->
+					</div><!-- modern-forms -->
+				</dd>
+				<dt>
+					<a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+						栏舍配置
+					</a>
+				</dt>
+				<dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+					<div class="modern-forms">
+						<div class="modern-container">
+							<form>
+								<fieldset>								
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">分娩舍单元数量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">产床数量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">定位栏数量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">机会栏数量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">调节补充栏数量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">保育栏数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">保育单元数量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">保育舍设计存栏量 头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">出栏保育猪头数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">育肥栏数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">育肥单元数量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">育肥设计存栏量</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">出栏育肥猪头数</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">隔离舍存栏量 头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">后备舍存栏量 头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">公猪舍存栏量 头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										
+
+									</div><!-- end form-row -->
+								</fieldset>
+
+							</form>
+						</div><!-- modern-container -->
+					</div><!-- modern-forms -->
+				</dd>
+				<dt>
+					<a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+						财务指标录入区
+					</a>
+				</dt>
+				<dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+					<div class="modern-forms">
+						<div class="modern-container">
+							<form>
+								<fieldset>
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">固定资产折旧 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">母猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">生物成本 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">后备母猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">饲料费用 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">种猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">药品费用 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">种猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">疫苗费用 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">种猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">人工管理费用 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">种猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">低值易耗品 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">种猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">水电燃料费用 元/头/年</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">种猪</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">药品费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">哺乳期间仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">疫苗费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">哺乳期间仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">教槽料费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">哺乳期间仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">固定资产折旧 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">保育仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">饲料费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">保育仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">药品费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">保育仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">疫苗费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">保育仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">人工管理费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">保育仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">水电燃料费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">保育仔猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">固定资产折旧费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">育肥猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">饲料费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">育肥猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">药品费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">育肥猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">疫苗费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">育肥猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">人工管理费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">育肥猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">水电燃料费用 元/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">育肥猪成本</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">商品猪出栏价格 元/kg</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">市场售价</span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">商品猪出栏平均体重 kg/头</label>
+												<span class="mdn-bar"></span>
+												<span class="mdn-msg right msg-hidden">出栏均重</span>
+											</div>
+										</div><!-- end col-6 -->
+										
+									</div><!-- end form-row -->
+
+
+								</fieldset>
+
+							</form>
+						</div><!-- modern-container -->
+					</div><!-- modern-forms -->
+				</dd>
+				<dt>
+					<a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="accordion-title accordionTitle js-accordionTrigger">
+						成本核算区
+					</a>
+				</dt>
+				<dd class="accordion-content accordionItem is-collapsed" id="accordion3" aria-hidden="true">
+					<div class="modern-forms">
+						<div class="modern-container">
+							<form>
+								<fieldset>								
+									<div class="form-row">
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">母猪成本 元/头/年</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">仔猪落地成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">哺乳期间仔猪成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">断奶成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">保育猪期间成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">保育猪期间死亡成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">保育猪成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">育肥猪期间成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">育肥猪死亡成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">出生-出栏成本 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">单位收益 元/kg</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">单头收益 元/头</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										<div class="col col-6">
+											<div class="field-group">
+												<input type="text" class="mdn-input">
+												<label class="mdn-label">总收益 万元/年</label>
+												<span class="mdn-bar"></span>
+											</div>
+										</div><!-- end col-6 -->
+										
+									</div><!-- end form-row -->
+								</fieldset>
+
+							</form>
+						</div><!-- modern-container -->
+					</div><!-- modern-forms -->
+				</dd>
+
+
+
+			</dl>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		//uses classList, setAttribute, and querySelectorAll
+		//if you want this to work in IE8/9 youll need to polyfill these
+		(function () {
+			var d = document,
+				accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
+				setAria,
+				setAccordionAria,
+				switchAccordion,
+				touchSupported = ('ontouchstart' in window),
+				pointerSupported = ('pointerdown' in window);
+
+			skipClickDelay = function (e) {
+				e.preventDefault();
+				e.target.click();
+			}
+
+			setAriaAttr = function (el, ariaType, newProperty) {
+				el.setAttribute(ariaType, newProperty);
+			};
+			setAccordionAria = function (el1, el2, expanded) {
+				switch (expanded) {
+					case "true":
+						setAriaAttr(el1, 'aria-expanded', 'true');
+						setAriaAttr(el2, 'aria-hidden', 'false');
+						break;
+					case "false":
+						setAriaAttr(el1, 'aria-expanded', 'false');
+						setAriaAttr(el2, 'aria-hidden', 'true');
+						break;
+					default:
+						break;
+				}
+			};
+			//function
+			switchAccordion = function (e) {
+				console.log("triggered");
+				e.preventDefault();
+				var thisAnswer = e.target.parentNode.nextElementSibling;
+				var thisQuestion = e.target;
+				if (thisAnswer.classList.contains('is-collapsed')) {
+					setAccordionAria(thisQuestion, thisAnswer, 'true');
+				} else {
+					setAccordionAria(thisQuestion, thisAnswer, 'false');
+				}
+				thisQuestion.classList.toggle('is-collapsed');
+				thisQuestion.classList.toggle('is-expanded');
+				thisAnswer.classList.toggle('is-collapsed');
+				thisAnswer.classList.toggle('is-expanded');
+
+				thisAnswer.classList.toggle('animateIn');
+			};
+			for (var i = 0, len = accordionToggles.length; i < len; i++) {
+				if (touchSupported) {
+					accordionToggles[i].addEventListener('touchstart', skipClickDelay, false);
+				}
+				if (pointerSupported) {
+					accordionToggles[i].addEventListener('pointerdown', skipClickDelay, false);
+				}
+				accordionToggles[i].addEventListener('click', switchAccordion, false);
+			}
+		})();
+	</script>
+
+</body>
+
+</html>
